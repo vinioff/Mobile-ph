@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# 🌟 Nani Visuais — App Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+App do ministério **Nani Visuais** — materiais didáticos bíblicos artesanais para ministério infantil.
 
-## Get started
+---
 
-1. Install dependencies
+## 📋 Pré-requisitos
 
-   ```bash
-   npm install
-   ```
+- [Node.js](https://nodejs.org/) versão **18 ou superior**
+- [Expo Go](https://expo.dev/go) instalado no celular
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Como executar
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 1. Clone o repositório
 ```bash
-npm run reset-project
+git clone https://github.com/seu-usuario/nani-visuais-app.git
+cd nani-visuais-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Crie o projeto base (SDK 54)
+```bash
+npx create-expo-app@latest nani-visuais-app --template default@sdk-54
+cd nani-visuais-app
+```
 
-## Learn more
+### 3. Copie os arquivos do repositório
+Sobrescreva: `app/`, `constants/`, `package.json`, `app.json`, `babel.config.js`, `tsconfig.json`
 
-To learn more about developing your project with Expo, look at the following resources:
+Delete o arquivo do template que conflita:
+```bash
+del app\(tabs)\explore.tsx      # Windows
+rm app/(tabs)/explore.tsx        # Mac/Linux
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 4. Instale as dependências
+```bash
+npm install
+npx expo install react-native-webview
+npx expo install react-native-youtube-iframe
+npx expo install babel-preset-expo
+```
 
-## Join the community
+### 5. Inicie
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+### 6. Abra no celular
+Escaneie o QR code com o **Expo Go**. Celular e PC na mesma rede Wi-Fi.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📱 Telas
+
+| Tab | Conteúdo |
+|---|---|
+| **Início** | Hero, diferenciais, história da Nani Visuais, CTA WhatsApp |
+| **Produtos** | 4 produtos com modal de detalhes e link direto pro WhatsApp |
+| **Vídeos** | 2 vídeos do YouTube sobre ministério infantil + player nativo |
+| **Contato** | Formulário, câmera de perfil, redes sociais e info de entrega |
+
+---
+
+## 🎨 Tema
+
+| Cor | Hex | Uso |
+|---|---|---|
+| Creme | `#f2ebd8` | Fundo |
+| Verde-menta | `#c5e0dc` | Header / Cards |
+| Verde-oliva | `#bbcd77` | Destaques / Badges |
+| Marrom | `#4a3728` | Texto principal |
+
+---
+
+## 🛠️ Stack
+
+| Tecnologia | Versão |
+|---|---|
+| Expo SDK | 54 |
+| expo-router | ~6.0.19 |
+| expo-camera | ~17.0.10 |
+| expo-video | ~3.0.15 |
+| react-native-youtube-iframe | ^2.3.0 |
+| react-native-webview | ^13.x |
+
+---
+
+## 📷 Câmera
+Na aba **Contato**, toque no avatar para tirar foto de perfil.  
+Se negou a permissão: **Configurações → Apps → Expo Go → Permissões → Câmera → Permitir**
+
+---
+
+## ⚠️ Problemas comuns
+
+**`explore.tsx` dando erro** → delete o arquivo (passo 3 acima)
+
+**App não abre no Expo Go** → mesma rede Wi-Fi que o PC
+
+**Vídeo não carrega** → verifique conexão com internet

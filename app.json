@@ -1,48 +1,15 @@
 {
   "expo": {
-    "name": "nani-visuais-app",
+    "name": "Nani Visuais",
     "slug": "nani-visuais-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "nanivisuaisapp",
-    "userInterfaceStyle": "automatic",
+    "scheme": "nanivisuais",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
-          "dark": {
-            "backgroundColor": "#000000"
-          }
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
-    }
+    "ios": { "supportsTablet": false, "bundleIdentifier": "com.nanivisuais.app" },
+    "android": { "package": "com.nanivisuais.app", "permissions": ["android.permission.CAMERA"] },
+    "plugins": ["expo-router", "expo-camera", "expo-video"],
+    "experiments": { "typedRoutes": true }
   }
 }
