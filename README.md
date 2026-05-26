@@ -19,22 +19,8 @@ git clone https://github.com/seu-usuario/nani-visuais-app.git
 cd nani-visuais-app
 ```
 
-### 2. Crie o projeto base (SDK 54)
-```bash
-npx create-expo-app@latest nani-visuais-app --template default@sdk-54
-cd nani-visuais-app
-```
 
-### 3. Copie os arquivos do repositório
-Sobrescreva: `app/`, `constants/`, `package.json`, `app.json`, `babel.config.js`, `tsconfig.json`
-
-Delete o arquivo do template que conflita:
-```bash
-del app\(tabs)\explore.tsx      # Windows
-rm app/(tabs)/explore.tsx        # Mac/Linux
-```
-
-### 4. Instale as dependências
+### 2. Instale as dependências
 ```bash
 npm install
 npx expo install react-native-webview
@@ -42,12 +28,12 @@ npx expo install react-native-youtube-iframe
 npx expo install babel-preset-expo
 ```
 
-### 5. Inicie
+### 3. Inicie
 ```bash
 npx expo start
 ```
 
-### 6. Abra no celular
+### 4 M. Abra no celular
 Escaneie o QR code com o **Expo Go**. Celular e PC na mesma rede Wi-Fi.
 
 ---
